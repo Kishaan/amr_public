@@ -1,0 +1,19 @@
+<package>
+  <description brief="amr_navigation">
+
+     amr_navigation
+
+  </description>
+  <author>Sergey Alexandrov</author>
+  <license>BSD</license>
+
+  <depend package="roscpp"/>
+  <depend package="actionlib"/>
+  <depend package="tf"/>
+
+  <depend package="amr_msgs"/>
+  <depend package="amr_srvs"/>
+
+</package>
+
+
