@@ -63,6 +63,10 @@ public:
     ros::NodeHandle nh;
     while (nh.ok())
     {
+      // Exit if the goal was aborted
+      if (!move_to_server_->isActive())
+        return;
+
       // Process pending preemption requests
       if (move_to_server_->isPreemptRequested())
       {

@@ -1,0 +1,19 @@
+<package>
+  <description brief="amr_perception">
+
+     amr_perception
+
+  </description>
+  <author>Sergey Alexandrov</author>
+  <license>BSD</license>
+
+  <depend package="roscpp"/>
+  <depend package="geometry_msgs"/>
+  <depend package="dynamic_reconfigure"/>
+
+  <depend package="amr_msgs"/>
+  <depend package="amr_srvs"/>
+
+</package>
+
+
