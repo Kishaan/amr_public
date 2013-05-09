@@ -1,2 +1,2 @@
 #!/bin/sh
-eval "$0_x`getconf LONG_BIT`"
+eval "$0_x`getconf LONG_BIT` $@"
