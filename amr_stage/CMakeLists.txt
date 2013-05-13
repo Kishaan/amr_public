@@ -38,7 +38,13 @@ find_path(STAGE_INCLUDE_DIR stage.hh
 )
 find_library(STAGE_LIBRARY stage
   /opt/stage/lib
+  /opt/stage/lib64
 )
+
+if(NOT STAGE_INCLUDE_DIR OR NOT STAGE_LIBRARY)
+  message(SEND_ERROR "Could not find Stage-4.1 installation under /opt/stage.")
+endif(NOT STAGE_INCLUDE_DIR OR NOT STAGE_LIBRARY)
+
 include_directories(${STAGE_INCLUDE_DIR})
 
 #...: target executables :....................................................
