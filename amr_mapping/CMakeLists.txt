@@ -57,8 +57,3 @@ rosbuild_add_executable(sonar_mapper
 target_link_libraries(sonar_mapper
   ${MAPSTORE_LIBRARY}
 )
-
-#...: sonar_simulation_test
-rosbuild_add_executable(sonar_simulation_test
-  nodes/sonar_simulation_test.cpp
-)
