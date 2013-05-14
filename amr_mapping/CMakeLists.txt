@@ -35,15 +35,15 @@ add_definitions(-Wno-deprecated)
 
 #...: determine OS type
 if((CMAKE_SIZEOF_VOID_P MATCHES 4) OR (CMAKE_CL_64 MATCHES 0))
-  set(SUFFIX x32)
+  set(SUFFIX _x32)
 elseif((CMAKE_SIZEOF_VOID_P MATCHES 8) OR (CMAKE_CL_64 MATCHES 1))
-  set(SUFFIX x64)
+  set(SUFFIX _x64)
 else()
   message(SEND_ERROR "Unable to determine whether the OS is 32 or 64 bit.")
 endif()
 
 #...: find mapstore library
-find_library(MAPSTORE_LIBRARY libmapstore_${SUFFIX}.so
+find_library(MAPSTORE_LIBRARY libmapstore${SUFFIX}.so
   lib
 )
 
