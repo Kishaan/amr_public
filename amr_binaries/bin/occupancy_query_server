@@ -1,2 +1,2 @@
 #!/bin/sh
-eval "$0_x`getconf LONG_BIT` $@"
+eval "LD_LIBRARY_PATH=`rospack find amr_mapping`/lib:$LD_LIBRARY_PATH $0_x`getconf LONG_BIT` $@"
