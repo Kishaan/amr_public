@@ -11,7 +11,7 @@ class OmniVelocityController : public VelocityController
 //========================= YOUR CODE HERE =========================
 // Instructions: put here all the functions that are necessary to
 //               implement the VelocityController interface. You may
-//               use the OmniVelocityController as an example.
+//               use the DiffVelocityController as an example.
 
 
 //==================================================================
