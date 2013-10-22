@@ -32,12 +32,16 @@ add_definitions(-Wno-deprecated)
 
 #...: dependencies :..........................................................
 
+
+
 #...: stage
 find_path(STAGE_INCLUDE_DIR stage.hh
-  /opt/stage/include/Stage-4.1
+  /opt/ros/groovy/stacks/stage/include/Stage-4.1/
+#  /opt/stage/include/Stage-4.1
 )
 find_library(STAGE_LIBRARY stage
-  /opt/stage/lib
+  /opt/ros/groovy/stacks/stage/lib64
+#  /opt/stage/lib
 )
 include_directories(${STAGE_INCLUDE_DIR})
 
@@ -50,4 +54,7 @@ rosbuild_add_executable(stage
   src/sonar.cpp
   src/base.cpp
 )
-target_link_libraries(stage ${STAGE_LIBRARY})
+FIND_PACKAGE(FLTK REQUIRED)
+target_link_libraries(stage ${STAGE_LIBRARY} ${FLTK_LIBRARIES})
+
+
