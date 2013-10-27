@@ -42,6 +42,3 @@ rosbuild_add_executable(motion_controller
   src/diff_velocity_controller.cpp
   src/omni_velocity_controller.cpp
 )
-rosbuild_link_boost(motion_controller
-  thread
-)

@@ -20,7 +20,6 @@
 
   <depend package="amr_msgs"/>
   <depend package="amr_srvs"/>
-  <depend package="amr_perception"/>
   <depend package="amr_navigation"/>
 
 </package>
