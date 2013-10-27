@@ -1,0 +1,28 @@
+<package>
+  <description brief="amr_bugs">
+
+     amr_bugs
+
+  </description>
+  <author>Sergey</author>
+  <license>BSD</license>
+
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="smach"/>
+  <depend package="smach_ros"/>
+  <depend package="smach_viewer"/>
+  <depend package="dynamic_reconfigure"/>
+  <depend package="actionlib"/>
+  <depend package="tf"/>
+  <depend package="std_srvs"/>
+  <depend package="geometry_msgs"/>
+
+  <depend package="amr_msgs"/>
+  <depend package="amr_srvs"/>
+  <depend package="amr_perception"/>
+  <depend package="amr_navigation"/>
+
+</package>
+
+
