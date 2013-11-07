@@ -6,8 +6,9 @@
   </description>
   <author>Sergey Alexandrov</author>
   <license>BSD</license>
-
+  <depend package="roscpp"/>
   <depend package="actionlib"/>
+  <depend package="actionlib_msgs"/>
   <depend package="sensor_msgs"/>
   <depend package="geometry_msgs"/>
   <depend package="nav_msgs"/>
