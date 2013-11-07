@@ -37,11 +37,10 @@ add_definitions(-Wno-deprecated)
 #...: stage
 find_path(STAGE_INCLUDE_DIR stage.hh
   /opt/ros/groovy/stacks/stage/include/Stage-4.1/
-#  /opt/stage/include/Stage-4.1
 )
 find_library(STAGE_LIBRARY stage
+  /opt/ros/groovy/stacks/stage/lib
   /opt/ros/groovy/stacks/stage/lib64
-#  /opt/stage/lib
 )
 include_directories(${STAGE_INCLUDE_DIR})
 
