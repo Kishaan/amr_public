@@ -42,6 +42,6 @@ add_definitions(-Wno-deprecated)
 
 #...: target executables :....................................................
 
-#rosbuild_add_executable(obstacle_detector
-#  nodes/obstacle_detector.cpp
-#)
+rosbuild_add_executable(obstacle_detector
+  nodes/obstacle_detector.cpp
+)
