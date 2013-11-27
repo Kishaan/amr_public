@@ -13,6 +13,8 @@ rosbuild_init()
 
 # set the default path for built executables to the "bin" directory
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+# set the default path for built libraries to the "lib" directory
+set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
 #...: compiler options :......................................................
 
@@ -42,9 +44,14 @@ else()
   message(SEND_ERROR "Unable to determine whether the OS is 32 or 64 bit.")
 endif()
 
-#...: find mapstore library
-find_library(MAPSTORE_LIBRARY libmapstore${SUFFIX}.so
-  lib
+
+#...: target libraries :......................................................
+
+rosbuild_add_library(mapstore${SUFFIX}
+  src/map_store.cpp
+  src/map_store_beam.cpp
+  src/map_store_cone.cpp
+  src/map_store_circle.cpp
 )
 
 #...: target executables :....................................................
@@ -55,5 +62,5 @@ rosbuild_add_executable(sonar_mapper
   src/sonar_map.cpp
 )
 target_link_libraries(sonar_mapper
-  ${MAPSTORE_LIBRARY}
+  mapstore${SUFFIX}
 )
