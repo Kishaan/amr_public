@@ -1,0 +1,21 @@
+<package>
+  <description brief="amr_localization">
+
+     amr_localization
+
+  </description>
+  <author>Sergey Alexandrov</author>
+  <license>BSD</license>
+
+  <depend package="roscpp"/>
+  <depend package="tf"/>
+  <depend package="visualization_msgs"/>
+
+  <depend package="amr_msgs"/>
+  <depend package="amr_srvs"/>
+  <depend package="amr_stage"/>
+  <depend package="amr_mapping"/>
+
+</package>
+
+

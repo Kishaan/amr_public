@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Stage node with "simple" world and ground truth map publishing -->
+  <include file="$(find amr_stage)/launch/stage.launch">
+    <arg name="map" default="true"/>
+  </include>
+
+  <!-- Occupancy query server node -->
+  <node pkg="amr_mapping" type="occupancy_query_server" name="occupancy_query_server" output="screen" required="true"/>
+
+  <!-- Sonar simulator GUI node -->
+  <node pkg="amr_ui" type="sonar_simulator_gui.py" name="sonar_simulator_gui"/>
+
+  <!-- Occupancy query client GUI node -->
+  <node pkg="amr_ui" type="occupancy_query_client_gui.py" name="occupancy_query_client_gui"/>
+
+</launch>

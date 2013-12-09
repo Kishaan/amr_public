@@ -35,45 +35,9 @@ add_definitions(-Wno-error=unknown-pragmas)
 add_definitions(-Wno-unknown-pragmas)
 add_definitions(-Wno-deprecated)
 
-#...: determine OS type
-if((CMAKE_SIZEOF_VOID_P MATCHES 4) OR (CMAKE_CL_64 MATCHES 0))
-  set(SUFFIX _x32)
-elseif((CMAKE_SIZEOF_VOID_P MATCHES 8) OR (CMAKE_CL_64 MATCHES 1))
-  set(SUFFIX _x64)
-else()
-  message(SEND_ERROR "Unable to determine whether the OS is 32 or 64 bit.")
-endif()
+#...: target executables :......................................................
 
-
-#...: target libraries :......................................................
-
-rosbuild_add_library(mapstore${SUFFIX}
-  src/map_store.cpp
-  src/map_store_beam.cpp
-  src/map_store_cone.cpp
-  src/map_store_circle.cpp
-)
-
-#...: target executables :....................................................
-
-#...: sonar_mapper
-rosbuild_add_executable(sonar_mapper
-  nodes/sonar_mapper.cpp
-  src/sonar_map.cpp
-)
-target_link_libraries(sonar_mapper
-  mapstore${SUFFIX}
-)
-
-#...: occupancy_query_server
-rosbuild_add_executable(occupancy_query_server
-  nodes/occupancy_query_server.cpp
-)
-target_link_libraries(occupancy_query_server
-  mapstore${SUFFIX}
-)
-
-#...: sonar_simulation_test
-rosbuild_add_executable(sonar_simulation_test
-  nodes/sonar_simulation_test.cpp
+#...: pose_likelihood_server
+rosbuild_add_executable(pose_likelihood_server
+  nodes/pose_likelihood_server.cpp
 )
