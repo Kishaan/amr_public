@@ -74,6 +74,6 @@ target_link_libraries(occupancy_query_server
 )
 
 #...: sonar_simulation_test
-rosbuild_add_executable(sonar_simulation_test
-  nodes/sonar_simulation_test.cpp
-)
+#rosbuild_add_executable(sonar_simulation_test
+#  nodes/sonar_simulation_test.cpp
+#)
