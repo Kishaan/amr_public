@@ -41,3 +41,10 @@ add_definitions(-Wno-deprecated)
 rosbuild_add_executable(pose_likelihood_server
   nodes/pose_likelihood_server.cpp
 )
+
+#...: particle_filter
+rosbuild_add_executable(particle_filter
+  nodes/particle_filter.cpp
+  src/particle_filter.cpp
+  src/particle_visualizer.cpp
+)

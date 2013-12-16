@@ -8,7 +8,7 @@ define hokuyosensor sensor
   fov 240
   # The real number of beams is 683,
   # however 180 is enough for our purposes.
-  samples 12
+  samples 32
   color_rgba [1 0 0 0.15]
 )
 
